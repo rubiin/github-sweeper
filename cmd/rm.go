@@ -52,7 +52,6 @@ func getRepos(ctx context.Context, client *github.Client) []repo {
 		})
 	}
 
-
 	return allRepos
 
 }
@@ -75,7 +74,7 @@ var rmCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		ctx := context.Background()
 		ts := oauth2.StaticTokenSource(
-			&oauth2.Token{AccessToken: "cfec092e82c9d2bf220faeeaf630e411860f9524"},
+			&oauth2.Token{AccessToken: ""},
 		)
 		tc := oauth2.NewClient(ctx, ts)
 
